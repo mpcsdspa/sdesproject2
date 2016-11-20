@@ -1,4 +1,5 @@
 # Kriging 
+[![Build Status](https://travis-ci.org/mpcsdspa/sdesproject2.svg?branch=master)](https://travis-ci.org/mpcsdspa/sdesproject2)
 [![CircleCI](https://circleci.com/gh/sankasuraj/sdesproject2.svg?style=shield)](https://circleci.com/gh/sankasuraj/sdesproject2) [![Documentation Status](https://readthedocs.org/projects/kriging/badge/?version=latest)](http://kriging.readthedocs.io/en/latest/?badge=latest)
 
 Kriging is a tool which produces ‘N’ dimensional approximation for the training data. Given a file containing data with both independent and dependent variables, we intend to model the relation between these variables. By using this model, we can find the output for the new input data.
