@@ -12,5 +12,5 @@ setup(name='kriging',
       author_email='sankasuraj@gmail.com',
       license='License',
       install_requires=requires,
-      packages=['kriging'],
+      packages=find_packages(),
       )
