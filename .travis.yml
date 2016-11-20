@@ -7,10 +7,13 @@ install:
   - pip install --upgrade pip
   - pip install -r requirements.txt
   - pip install coverage
+  - pip install pytest
+  - pip install pytest-cov
   - pip install python-coveralls
 
 script:
   - nosetests --with-coverage -v
+  - py.test --cov
 
 after_success:
   - coveralls
