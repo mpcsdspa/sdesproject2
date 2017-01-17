@@ -1,12 +1,14 @@
 import os
 import sys
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8004426176496141a9bdf90fb72851f37903f479
 module_path = os.path.dirname(os.path.curdir + os.path.sep)
 sys.path.insert(0, os.path.abspath(module_path))
 from kriging import *
 import numpy as np
 import unittest
-import numpy.testing as npt
 import pytest
 
 
@@ -48,8 +50,10 @@ class TestKriging(unittest.TestCase):
     def test_for_inverse_normalisation_x(self):
         for i in range(model_test.k):
             given = (
-                model_test.x[:, i] * (model_test.max_x[i] -
-                                      model_test.min_x[i]) + model_test.min_x[i])
+                model_test.x[:, i] * (
+                 model_test.max_x[i] - model_test.min_x[i]) +
+                model_test.min_x[i]
+                )
             self.compare_arrays(given, x_test[:, i])
 
     def test_for_training(self):
@@ -65,6 +69,26 @@ class TestKriging(unittest.TestCase):
         os.remove('test.csv')
         os.remove('model.csv')
 
+    def test_for_finding_y(self):
+        f = open('test.csv', 'wb')
+        writer = csv.writer(f, delimiter=',')
+        for i in range(model_test.n):
+            row = np.concatenate([x_test[i], y_test[i]])
+            writer.writerow(row)
+        f.close()
+        train_model('model.csv', 'test.csv')
+        f = open('find_y.csv', 'wb')
+        writer = csv.writer(f, delimiter=',')
+        for i in range(model_test.n):
+            writer.writerow(x_test[i])
+        f.close()
+        find_values('model.csv', 'find_y.csv', 'out.csv')
+        assert os.path.exists('find_y.csv')
+        assert os.path.exists('out.csv')
+        os.remove('test.csv')
+        os.remove('find_y.csv')
+        os.remove('out.csv')
+        os.remove('model.csv')
 
 if __name__ == '__main__':
     unittest.main()

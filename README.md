@@ -1,6 +1,14 @@
 # Kriging 
+<<<<<<< HEAD
 [![Build Status](https://travis-ci.org/mpcsdspa/sdesproject2.svg?branch=master)](https://travis-ci.org/mpcsdspa/sdesproject2)
 [![CircleCI](https://circleci.com/gh/sankasuraj/sdesproject2.svg?style=shield)](https://circleci.com/gh/sankasuraj/sdesproject2) [![Documentation Status](https://readthedocs.org/projects/kriging/badge/?version=latest)](http://kriging.readthedocs.io/en/latest/?badge=latest)
+=======
+[![Build Status](https://travis-ci.org/sankasuraj/sdesproject2.svg?branch=master)](https://travis-ci.org/sankasuraj/sdesproject2) 
+[![CircleCI](https://circleci.com/gh/sankasuraj/sdesproject2.svg?style=shield)](https://circleci.com/gh/sankasuraj/sdesproject2) 
+[![Coverage Status](https://coveralls.io/repos/github/sankasuraj/sdesproject2/badge.svg?branch=master)](https://coveralls.io/github/sankasuraj/sdesproject2?branch=master)
+[![Documentation Status](https://readthedocs.org/projects/kriging/badge/?version=latest)](http://kriging.readthedocs.io/en/latest/?badge=latest)
+[![Requirements Status](https://requires.io/github/sankasuraj/sdesproject2/requirements.svg?branch=master)](https://requires.io/github/sankasuraj/sdesproject2/requirements/?branch=master)
+>>>>>>> 8004426176496141a9bdf90fb72851f37903f479
 
 Kriging is a tool which produces ‘N’ dimensional approximation for the training data. Given a file containing data with both independent and dependent variables, we intend to model the relation between these variables. By using this model, we can find the output for the new input data.
 The independent variables can be of any of dimension while the dependent variables is restricted to only one dimension.
@@ -11,12 +19,15 @@ The core dependencies are:
 - numpy
 - matplotlib
 - scipy
+- inspyred
+- Tkinter
 
 ### Installation
-- git clone https://github.com/sankasuraj/sdesproject2.git
-- cd sdesproject2
-- pip install -r requirements.txt
-- python setup.py install
+
+    $ git clone https://github.com/sankasuraj/sdesproject2.git
+    $ cd sdesproject2
+    $ pip install -r requirements.txt
+    $ python setup.py install
 
 ### Credits
 
